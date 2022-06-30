@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="responsiveness.css">
+    <title>Contact Max</title>
+    <script src="https://kit.fontawesome.com/9944bde347.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div class="home" id="home"></div>
+    <div class="nav">
+        <nav>
+            <button class="nav-toggler" aria-expanded="false" aria-controls="navbarDropdown">
+                <span>&#9776</span>
+            </button>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<section>
+    <div class="contact-box">
+
+    </div>
+</section>
+<script>
+    const nav = document.getElementById("topNav");
+window.onscroll = function () {
+    if (window.pageYOffset > 100) {
+        nav.classList.add("sticky");
+    } else {
+        nav.classList.remove("sticky");
+    }
+};
+const navButton = document.querySelector('button[aria-expanded]');
+function toggleNav({ target }) {
+    const expanded = target.getAttribute('aria-expanded') === 'true' || false;
+    navButton.setAttribute('aria-expanded', !expanded);
+}
+navButton.addEventListener('click', toggleNav);
+</script>
+</body>
+</html>
