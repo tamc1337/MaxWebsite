@@ -3,6 +3,7 @@
        font-size: 6rem;
    }
 }
+
 @media screen and (max-width:768px) {
     [aria-controls="navbarDropdown"]{
         display: block;
@@ -39,6 +40,7 @@
     }
     .content-container{
         grid-template-columns: 1fr;
+        padding: 1rem 1.5rem;
     }
     .collection-piece .collection-item{
         font-size: 2rem;
@@ -64,7 +66,7 @@
     .nav nav ul{
         flex-direction: column;
         padding-left: 0;
-        gap: 0rem;
+        gap: 0px;
         position: fixed;
         top: 2rem;
         right: 1rem;
@@ -74,9 +76,12 @@
         font-size: 2.5rem;
     }
     .nav ul li{
-        border: 1px solid var(--whiteish);
+        background-color: white;
+        border: 1px solid var(--background-color);
     }
-   
+    .full-site-modal{
+        margin: 1rem 0rem;
+    }
     [aria-controls="navbarDropdown"]{
         position: fixed;
         top: 0;

@@ -82,6 +82,11 @@ a {
     justify-content: space-around;
     padding-top: 2rem;
 }
+.collection-sample > .collection-title{
+    font-size: 4rem;
+    text-decoration: underline;
+    font-family: 'Courier New', Courier, monospace;
+}
 .modal-title-wrapper .collection-title {
     font-size: 4.5rem;
     text-decoration: underline;
@@ -97,6 +102,7 @@ a {
 }
 .collection-piece .collection-item p{
     display: inline;
+    font-family: 'Josefin Slab', serif; ;
 }
 .collection-piece .collection-item a {
     color: darkslategrey;
