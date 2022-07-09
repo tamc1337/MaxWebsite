@@ -102,12 +102,14 @@ a {
 }
 .collection-piece .collection-item p{
     display: inline;
-    font-family: 'Josefin Slab', serif; ;
+    font-family: 'Josefin Slab', serif; 
 }
 .collection-piece .collection-item a {
     color: darkslategrey;
 }
-
+#distraction .collection-item .story {
+    font-family: 'Josefin Slab', serif; 
+}
 
 
 
@@ -199,6 +201,7 @@ a {
     padding-left: 3rem;
     padding-right: 3rem;
     margin: 1rem 2rem;
+    font-family: 'Josefin Slab', serif; 
 }
 
 .modal-body{
