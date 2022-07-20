@@ -7,6 +7,24 @@ const modalOpen = '[data-open]';
 const modalClose = '[data-close]';
 const isVisible = 'is-visible';
 
+//From EastSleepCode 
+const theme = 'theme';
+const dataTheme = 'data-theme';
+const themeTab = '.theme-tab';
+const switcherBtn = '.switcher-btn';
+const dark = 'dark';
+const light = 'light';
+const active = 'active';
+
+const dataFilter = '[data-filter]';
+const portfolioData = '[data-item]';
+
+/* Theme */
+const toggleTheme = document.querySelector(themeTab);
+const switcher = document.querySelectorAll(switcherBtn);
+const currentTheme = localStorage.getItem(theme);
+
+
 const root = document.documentElement;
 
 /* Modal */
@@ -38,52 +56,52 @@ document.getElementById("secretKey").addEventListener('click', function() {
 
 
 
-// const setActive = (elm, selector) => {
-//     if (document.querySelector(`${selector}.${active}`) !== null) {
-//         document.querySelector(`${selector}.${active}`).classList.remove(active);
-//     }
-//     elm.classList.add(active);
-// };
+const setActive = (elm, selector) => {
+    if (document.querySelector(`${selector}.${active}`) !== null) {
+        document.querySelector(`${selector}.${active}`).classList.remove(active);
+    }
+    elm.classList.add(active);
+};
 
-// const setTheme = (val) => {
-//     if (val === dark) {
-//         root.setAttribute(dataTheme, dark);
-//         localStorage.setItem(theme, dark);
-//     } else {
-//         root.setAttribute(dataTheme, light);
-//         localStorage.setItem(theme, light);
+const setTheme = (val) => {
+    if (val === dark) {
+        root.setAttribute(dataTheme, dark);
+        localStorage.setItem(theme, dark);
+    } else {
+        root.setAttribute(dataTheme, light);
+        localStorage.setItem(theme, light);
         
-//     }
-// };
+    }
+};
 
-// if (currentTheme) {
-//     root.setAttribute(dataTheme, currentTheme);
-//     switcher.forEach((btn) => {
-//         btn.classList.remove(active);
-//     });
-//     if (currentTheme === dark) {
-//         switcher[1].classList.add(active);
-//     } else {
-//         switcher[0].classList.add(active);
-//     };
-// };
+if (currentTheme) {
+    root.setAttribute(dataTheme, currentTheme);
+    switcher.forEach((btn) => {
+        btn.classList.remove(active);
+    });
+    if (currentTheme === dark) {
+        switcher[1].classList.add(active);
+    } else {
+        switcher[0].classList.add(active);
+    };
+};
 
-// toggleTheme.addEventListener('click', function () {
-//     const tab = this.parentElement.parentElement;
-//     if (!tab.className.includes(open)) {
-//         tab.classList.add(open);
-//     } else {
-//         tab.classList.remove(open);
-//     }
-// });
+toggleTheme.addEventListener('click', function () {
+    const tab = this.parentElement.parentElement;
+    if (!tab.className.includes(open)) {
+        tab.classList.add(open);
+    } else {
+        tab.classList.remove(open);
+    }
+});
 
-// for (const elm of switcher) {
-//     elm.addEventListener('click', function () {
-//         const toggle = this.dataset.toggle;
-//         // set active state
-//         setActive(elm, switcherBtn);
-//         setTheme(toggle);
-//     })
-// };
+for (const elm of switcher) {
+    elm.addEventListener('click', function () {
+        const toggle = this.dataset.toggle;
+        // set active state
+        setActive(elm, switcherBtn);
+        setTheme(toggle);
+    })
+};
 
 
